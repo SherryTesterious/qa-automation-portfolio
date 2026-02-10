@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sherry | QA Automation Tester</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      background: #f7f7f7;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background: #1f2933;
+      color: #fff;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    section {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    h2 {
+      border-bottom: 2px solid #e5e7eb;
+      padding-bottom: 10px;
+    }
+    .card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      margin-bottom: 20px;
+    }
+    .lang-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+    }
+    button {
+      padding: 6px 12px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-left: 5px;
+    }
+    .btn-active {
+      background: #2563eb;
+      color: white;
+    }
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+<div class="lang-toggle">
+  <button onclick="setLang('en')" id="btn-en" class="btn-active">EN</button>
+  <button onclick="setLang('zh')" id="btn-zh">中文</button>
+</div>
+
+<header>
+  <h1 data-en="Sherry – QA Automation Tester" data-zh="Sherry – 软件测试 / 自动化测试">Sherry – QA Automation Tester</h1>
+  <p data-en="Manual QA → Automation Tester (Playwright)" data-zh="从手动测试成长中的自动化测试工程师">Manual QA → Automation Tester (Playwright)</p>
+</header>
+
+<section>
+  <h2 data-en="About Me" data-zh="关于我">About Me</h2>
+  <div class="card">
+    <p data-en="I’m a QA Engineer with four years of experience in functional and acceptance testing. I worked on verifying data accuracy, system stability, and user experience through structured manual testing, helping to ensure stable releases and consistent quality. While my previous role was mainly manual, I’ve been learning Playwright and automation fundamentals to expand my technical skills. I enjoy working carefully, collaborating with teams, and continuously learning to deliver reliable software."
+       data-zh="我是一名拥有四年经验的 QA 工程师，主要负责功能测试与验收测试，涵盖数据准确性、系统稳定性及用户体验验证。我过去的工作以手动测试为主，目前正在学习 Playwright 与自动化测试基础，以提升技术能力。我做事细心，重视团队协作，并持续学习，致力于交付稳定可靠的软件。">
+       I’m a QA Engineer with four years of experience in functional and acceptance testing...
+    </p>
+  </div>
+</section>
+
+<section>
+  <h2 data-en="Skills" data-zh="技能">Skills</h2>
+  <div class="card">
+    <ul>
+      <li data-en="Manual Testing, Functional & UAT" data-zh="手动测试、功能测试、验收测试">Manual Testing, Functional & UAT</li>
+      <li data-en="Test Case Design & Execution" data-zh="测试用例设计与执行">Test Case Design & Execution</li>
+      <li data-en="Playwright (Learning & Practice)" data-zh="Playwright（学习与实作中）">Playwright (Learning & Practice)</li>
+      <li data-en="Basic Automation Concepts" data-zh="自动化测试基础概念">Basic Automation Concepts</li>
+      <li data-en="API Testing (Postman)" data-zh="API 测试（Postman）">API Testing (Postman)</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2 data-en="Projects" data-zh="项目经验">Projects</h2>
+  <div class="card">
+    <h3>ParaBank Playwright Automation</h3>
+    <p data-en="A practice automation project built with Playwright for end-to-end testing. Includes login, navigation, and basic user flow automation as part of my self-learning journey."
+       data-zh="使用 Playwright 编写的自动化练习项目，用于端到端测试。包含登录、页面导航及基础用户流程自动化，作为我自学自动化测试的一部分。">
+    </p>
+    <p>
+      GitHub: <a href="https://github.com/SherryTesterious/parabank-playwright" target="_blank">View Repository</a>
+    </p>
+  </div>
+</section>
+
+<section>
+  <h2 data-en="Contact" data-zh="联系我">Contact</h2>
+  <div class="card">
+    <p>Email: sherry.testerious@gmail.com</p>
+    <p>GitHub: <a href="https://github.com/SherryTesterious" target="_blank">github.com/SherryTesterious</a></p>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Sherry – QA Automation Portfolio</p>
+</footer>
+
+<script>
+  function setLang(lang) {
+    document.querySelectorAll('[data-en]').forEach(el => {
+      el.textContent = el.getAttribute(`data-${lang}`);
+    });
+    document.getElementById('btn-en').classList.remove('btn-active');
+    document.getElementById('btn-zh').classList.remove('btn-active');
+    document.getElementById(`btn-${lang}`).classList.add('btn-active');
+  }
+</script>
+
+</body>
+</html>
